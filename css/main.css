@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: table-cell;
+  vertical-align: middle;
+  background: #000 url();
+  background-size: cover;
+  color: #fff;
+}
