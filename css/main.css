@@ -2,14 +2,15 @@
   box-sizing: border-box;
 }
 html {
-  display: table;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 body {
-  display: table-cell;
-  vertical-align: middle;
-  background: #000 url();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #3A99BD url() no-repeat fixed;
   background-size: cover;
-  color: #fff;
 }
