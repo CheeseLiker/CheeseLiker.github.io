@@ -6,21 +6,23 @@
   </head>
   
   <body>
-    <nav>
+    <div class="wraper">
+      <nav>
+        <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/react-gh-pages">React Test</a></li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        {{ content }}
+      </div>
+
+      <footer>
       <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/react-gh-pages">React Test</a></li>
+      <li><a href="https://github.com/CheeseLiker">github.com/CheeseLiker</a></li>
       </ul>
-    </nav>
-    
-    <div class="container">
-      {{ content }}
+      </footer>
     </div>
-  
-    <footer>
-    <ul>
-    <li><a href="https://github.com/CheeseLiker">github.com/CheeseLiker</a></li>
-    </ul>
-    </footer>
   </body>
 </html>
