@@ -3,22 +3,16 @@
   <head>
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
   </head>
   
   <body>
+		{% include nav.html %}
+		
     <div class="wraper">
-      {% include nav.html %}
-
-      <div class="container">
         {{ content }}
-      </div>
+		</div>
 
-      <footer>
-      <ul>
-      <li><a href="https://github.com/CheeseLiker">github.com/CheeseLiker</a></li>
-      </ul>
-      </footer>
-    </div>
+		{% include footer.html %}
   </body>
 </html>
