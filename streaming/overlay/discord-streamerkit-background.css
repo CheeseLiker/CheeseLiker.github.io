@@ -1,0 +1,117 @@
+/* Size Information
+Source: Width = 400, Height = 1080
+StreamerKit: Text Size = 30, Small Avatars
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.voice-container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.voice-container .voice-states {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    margin: 0;
+    border-radius: 20px;
+    padding: 1em 10px;
+}
+
+.voice-container .voice-states:not(:empty) {
+    background: rgba(34, 36, 36, 0.95);
+}
+
+.voice-container .voice-states .voice-state.small-avatar {
+	height: auto;
+	margin-bottom: 3px;
+}
+
+.voice-state,
+.voice-container .voice-states .voice-state .user {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 0 !important;
+}
+
+.voice-container .voice-states .voice-state.small-avatar img.avatar {
+    margin: 0 5px 0 0;
+    width: 46px;
+    height: auto;
+}
+
+.voice-container .voice-states .voice-state .user .name {
+    background: #266448 !important;
+    padding: 0 0.3em;
+}
+
+.voice-container .voice-states .voice-state .user .name,
+.voice-container .voice-states .voice-state .user .name:before {
+    display: block;
+    max-width: calc(100vw - 74px);
+    border-radius: 100px;
+    color: white;
+    text-overflow: ellipsis;
+    line-height: initial;
+    overflow: hidden;
+}
+
+/* Remove background when not speaking */
+.voice-container .voice-states .voice-state .avatar:not(.speaking) + .user .name {
+    background: transparent !important;
+    opacity: 0.8;
+}
+
+/* Put my voice-state above others */
+.voice-state[data-reactid*="600050081173078048"] {
+	order: -1;
+}
+
+/* Make my img slightly larger than others */
+.voice-container .voice-states .voice-state.small-avatar img[data-reactid*="600050081173078048"] {
+    width: 52px;
+    margin-left: -3px;
+}
+
+
+/* Nickname Replacements */
+.voice-container .voice-states .voice-state .user .name:before {
+    letter-spacing: initial;
+}
+
+.name[data-reactid*="600050081173078048"],
+.name[data-reactid*="159922190748352514"],
+.name[data-reactid*="233392384971374593"],
+.name[data-reactid*="254034470930219008"],
+.name[data-reactid*="310880678487261184"],
+.name[data-reactid*=""]{
+    display: flex !important;
+    color: transparent !important;
+    letter-spacing: -9999px;
+}
+
+.name[data-reactid*="600050081173078048"]:before {
+   content: "CheeseLiker";
+}
+
+.name[data-reactid*="159922190748352514"]:before {
+    content: "Soccer";
+}
+
+.name[data-reactid*="233392384971374593"]:before {
+    content: "joshrpg";
+}
+
+.name[data-reactid*="254034470930219008"]:before {
+	content: "Guardax";
+}
+
+.name[data-reactid*="310880678487261184"]:before {
+	content: "beandird";
+}
