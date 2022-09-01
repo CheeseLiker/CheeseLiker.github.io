@@ -3,6 +3,8 @@ Source: Width = 400, Height = 1080
 StreamerKit: Text Size = 30, Small Avatars
 */
 
+@import url('https://fonts.googleapis.com/css?family=Fredoka');
+
 * {
     box-sizing: border-box;
 }
@@ -14,11 +16,14 @@ StreamerKit: Text Size = 30, Small Avatars
     height: 100vh;
     margin: 0;
     padding-left: 10px;
+    font-family: Fredoka, sans-serif;
+    font-weight: normal;
 }
 
 .voice-container .voice-states .voice-state.small-avatar {
 	height: auto;
 	margin-bottom: 3px;
+    position: relative;
 }
 
 .voice-state,
@@ -35,15 +40,29 @@ StreamerKit: Text Size = 30, Small Avatars
     height: auto;
 }
 
+.voice-container .voice-states .voice-state.small-avatar:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    top: 3px;
+    left: 3px;
+    box-shadow: black 5px 5px 10px;
+    border-radius: 100px;
+    z-index: -1;
+}
+
 .voice-container .voice-states .voice-state .user .name {
     background: #266448 !important;
     padding: 0 0.3em;
+    box-shadow: black 5px 5px 10px;
 }
 
 .voice-container .voice-states .voice-state .user .name,
 .voice-container .voice-states .voice-state .user .name:before {
     display: block;
-    max-width: calc(100vw - 64px);
+    max-width: calc(100vw - 75px);
     border-radius: 100px;
     color: white;
     text-overflow: ellipsis;
@@ -75,6 +94,11 @@ StreamerKit: Text Size = 30, Small Avatars
     margin-left: -3px;
 }
 
+.voice-container .voice-states .voice-state.small-avatar[data-reactid*="600050081173078048"]:after {
+    width: 46px;
+    height: 46px;
+    left: 0;
+}
 
 /* Nickname Replacements */
 .voice-container .voice-states .voice-state .user .name:before {
