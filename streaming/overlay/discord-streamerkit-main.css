@@ -110,7 +110,8 @@ StreamerKit: Text Size = 30, Small Avatars
 .name[data-reactid*="233392384971374593"],
 .name[data-reactid*="254034470930219008"],
 .name[data-reactid*="310880678487261184"],
-.name[data-reactid*=""]{
+.name[data-reactid*="205559220697956354"],
+.name[data-reactid*=""] {
     display: flex !important;
     color: transparent !important;
     letter-spacing: -9999px;
@@ -134,4 +135,8 @@ StreamerKit: Text Size = 30, Small Avatars
 
 .name[data-reactid*="310880678487261184"]:before {
 	content: "beandird";
+}
+
+.name[data-reactid*="205559220697956354"]:before {
+	content: "Angelic";
 }
