@@ -6,140 +6,139 @@ StreamerKit: Text Size = 30, Small Avatars
 @import url('https://fonts.googleapis.com/css?family=Fredoka');
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.voice-container {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    font-family: Fredoka, sans-serif;
-    font-weight: normal;
+[class^=Voice_voiceContainer] {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	font-family: Fredoka, sans-serif;
+	font-weight: normal;
 }
 
-.voice-container .voice-states {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    height: fit-content;
-    margin: 0;
-    border-radius: 20px;
-    padding: 1em;
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates] {
+	display: grid;
+	grid-template-columns: auto auto;
+	position: relative;
+	margin: 0 10px 0 0;
+	border-radius: 20px;
+	padding: 1em;
 }
 
-.voice-container .voice-states:not(:empty) {
-    background: rgba(34, 36, 36, 0.95);
+/* Only apply background/shadow with users in voice, so it does not show an empty box */
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates]:not(:empty) {
+	background: rgba(34, 36, 36, 0.95);
 }
 
 /* box-shadow set separately to help with color clipping around border-radius corners */
-.voice-container .voice-states:not(:empty):after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    box-shadow: black 5px 5px 10px;
-    border-radius: 23px;
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates]:not(:empty):after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	box-shadow: black 5px 5px 10px;
+	border-radius: 23px;
 }
 
-.voice-container .voice-states .voice-state.small-avatar {
-	height: auto;
-	margin-bottom: 3px;
+/* Voice state set to contents so reordering users is possible */
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates] [class^=Voice_voiceState_] {
+	display: contents;
 }
 
-.voice-state,
-.voice-container .voice-states .voice-state .user {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    padding: 0 !important;
+/* TODO check if this is a dupe */
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates] [class^=Voice_voiceState_] [class^=Voice_user] {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	padding: 0 !important;
 }
 
-.voice-container .voice-states .voice-state.small-avatar img.avatar {
-    margin: 0 5px 0 0;
-    width: 46px;
-    height: auto;
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates] [class^=Voice_voiceState_] img[class^=Voice_avatar] {
+	margin: 0 5px 3px 0;
+	width: 46px;
+	height: 46px;
 }
 
-.voice-container .voice-states .voice-state .user .name {
-    background: #266448 !important;
-    padding: 0 0.3em;
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates] [class^=Voice_voiceState_] [class^=Voice_user] [class^=Voice_name] {
+	background: #266448 !important;
+	padding: 0 0.3em;
+	border-radius: 100px;
 }
 
-.voice-container .voice-states .voice-state .user .name,
-.voice-container .voice-states .voice-state .user .name:before {
-    display: block;
-    max-width: calc(100vw - 66px - 1em);
-    border-radius: 100px;
-    color: white;
-    text-overflow: ellipsis;
-    line-height: initial;
-    overflow: hidden;
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates] [class^=Voice_voiceState_] [class^=Voice_user] [class^=Voice_name],
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates] [class^=Voice_voiceState_] [class^=Voice_user] [class^=Voice_name]:before {
+	display: block;
+	max-width: calc(100vw - 66px - 1em);
+	color: white;
+	text-overflow: ellipsis;
+	line-height: initial;
+	overflow: hidden;
 }
 
 /* Remove background when not speaking */
-.voice-container .voice-states .voice-state .avatar:not(.speaking) + .user .name {
-    background: transparent !important;
-    opacity: 0.8;
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates] [class^=Voice_voiceState_] img[class^=Voice_avatar]:not([class*=Voice_avatarSpeaking]) + [class^=Voice_user] [class^=Voice_name] {
+	background: transparent !important;
+	opacity: 0.8;
 }
 
-/* Put my voice-state above others */
-.voice-state[data-reactid*="600050081173078048"] {
+/* Put my user above others */
+img[src*="600050081173078048"],
+img[src*="600050081173078048"] + [class^=Voice_user] {
 	order: -1;
 }
 
 /* Make my img slightly larger than others */
-.voice-container .voice-states .voice-state.small-avatar img[data-reactid*="600050081173078048"] {
-    width: 52px;
-    margin-left: -3px;
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates] [class^=Voice_voiceState_] img[src*="600050081173078048"] {
+	width: 52px;
+	height: 52px;
+	margin-left: -3px;
 }
-
 
 /* Nickname Replacements */
-.voice-container .voice-states .voice-state .user .name:before {
-    letter-spacing: initial;
+[class^=Voice_voiceContainer] [class^=Voice_voiceStates] [class^=Voice_voiceState_] [class^=Voice_user] [class^=Voice_name]:before {
+	letter-spacing: initial;
 }
 
-.name[data-reactid*="600050081173078048"],
-.name[data-reactid*="159922190748352514"],
-.name[data-reactid*="233392384971374593"],
-.name[data-reactid*="254034470930219008"],
-.name[data-reactid*="310880678487261184"],
-.name[data-reactid*="205559220697956354"],
-.name[data-reactid*="324306602331209730"],
-.name[data-reactid*=""] {
-    display: flex !important;
-    color: transparent !important;
-    letter-spacing: -9999px;
+img[src*="600050081173078048"] + [class^=Voice_user] [class^=Voice_name],
+img[src*="159922190748352514"] + [class^=Voice_user] [class^=Voice_name],
+img[src*="233392384971374593"] + [class^=Voice_user] [class^=Voice_name],
+img[src*="254034470930219008"] + [class^=Voice_user] [class^=Voice_name],
+img[src*="310880678487261184"] + [class^=Voice_user] [class^=Voice_name],
+img[src*="205559220697956354"] + [class^=Voice_user] [class^=Voice_name],
+img[src*="324306602331209730"] + [class^=Voice_user] [class^=Voice_name] {
+	display: flex !important;
+	color: transparent !important;
+	letter-spacing: -9999px;
 }
 
-.name[data-reactid*="600050081173078048"]:before {
-   content: "CheeseLiker";
+img[src*="600050081173078048"] + [class^=Voice_user] [class^=Voice_name]:before {
+	content: "CheeseLiker";
 }
 
-.name[data-reactid*="159922190748352514"]:before {
-    content: "Soccer";
+img[src*="159922190748352514"] + [class^=Voice_user] [class^=Voice_name]:before {
+	content: "Soccer";
 }
 
-.name[data-reactid*="233392384971374593"]:before {
-    content: "joshrpg";
+img[src*="233392384971374593"] + [class^=Voice_user] [class^=Voice_name]:before {
+	content: "joshrpg";
 }
 
-.name[data-reactid*="254034470930219008"]:before {
+img[src*="254034470930219008"] + [class^=Voice_user] [class^=Voice_name]:before {
 	content: "Guardax";
 }
 
-.name[data-reactid*="310880678487261184"]:before {
+img[src*="310880678487261184"] + [class^=Voice_user] [class^=Voice_name]:before {
 	content: "beandird";
 }
 
-.name[data-reactid*="205559220697956354"]:before {
+img[src*="205559220697956354"] + [class^=Voice_user] [class^=Voice_name]:before {
 	content: "Angelic";
 }
 
-.name[data-reactid*="324306602331209730"]:before {
+img[src*="324306602331209730"] + [class^=Voice_user] [class^=Voice_name]:before {
 	content: "Fell Umbra";
 }
