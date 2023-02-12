@@ -94,6 +94,7 @@ img[src*="233392384971374593"] + [class^=Voice_user] [class^=Voice_name],
 img[src*="254034470930219008"] + [class^=Voice_user] [class^=Voice_name],
 img[src*="310880678487261184"] + [class^=Voice_user] [class^=Voice_name],
 img[src*="205559220697956354"] + [class^=Voice_user] [class^=Voice_name],
+img[src*="185532008548663297"] + [class^=Voice_user] [class^=Voice_name],
 img[src*="324306602331209730"] + [class^=Voice_user] [class^=Voice_name] {
 	display: flex !important;
 	color: transparent !important;
@@ -126,4 +127,8 @@ img[src*="205559220697956354"] + [class^=Voice_user] [class^=Voice_name]:before 
 
 img[src*="324306602331209730"] + [class^=Voice_user] [class^=Voice_name]:before {
 	content: "Fell Umbra";
+}
+
+img[src*="185532008548663297"] + [class^=Voice_user] [class^=Voice_name]:before {
+	content: "Blackbelt244";
 }
