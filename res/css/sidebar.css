@@ -1,0 +1,706 @@
+#username {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#username h1 + a {
+  margin: 0 auto;
+}
+
+#username .userpetname-btn + .userpetname-btn {
+  display: none;
+}
+
+#username ul {
+  height: 4rem;
+  overflow: hidden;
+  line-height: 1em !important;
+  padding-top: 3px;
+  order: 2;
+}
+
+#username ul a {
+	text-align: right;
+	display: block;
+	flex: 50% 0 0;
+}
+
+#username ul a:before {
+  /* content: ""; */
+  display: inline-block;
+  font-size: 16px;
+  margin: -3px 0;
+  width: 1em;
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#username ul a:hover:before {
+	filter: drop-shadow(0 0 1px white);
+}
+
+#username a[href$="reiflem/bank/"]:before {
+	background-image: url(https://images.rescreatu.com/items/all/BarterCoin1Million.png);
+	/*content: url(https://images.rescreatu.com/items/all/BarterCoin1Million.png);*/
+}
+
+#username a[href$="creditshop/buy/items/"]:before {
+	background-image: url(https://images.rescreatu.com/items/tokens/3/credittoken_1000.png);
+}
+
+#username a[href$="games/treasure-hunter/"]:before {
+	background-image: url(https://images.rescreatu.com/items/all/oldcoin_bronze.png);
+}
+
+#username a[href$="games/kirsquest/"]:before {
+	background-image: url(https://media.rescreatu.com/items/all/skiptokenalt.png);
+}
+
+
+
+/* Make sidebar cool ------------- */
+
+.wraper {
+	display: contents;
+	background: inherit;
+}
+
+body {
+	display: grid;
+	grid-template-columns: repeat(6, 35px) 100fr;
+	grid-template-rows: 1fr repeat(13, min-content) 2fr;
+	height: 100vh;
+	justify-items: center;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: relative;
+	margin-right: -17px;
+}
+
+div#sidebar {
+	display: contents;
+}
+
+div#main-navbar {
+	display: contents;
+}
+
+div#main-navbar #actions {
+	display: none;
+}
+
+div#header {
+	display: contents;
+}
+
+div#search {
+	display: none;
+}
+
+div#sidebar #petname {
+	float: initial;
+}
+
+div#footer_bg {
+	display: none;
+}
+
+div#sidebar .links {
+	display: contents;
+}
+
+div#header h1 {
+	grid-column: 1 / span 6;
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+#main-navbar #inventory {
+	display: contents;
+}
+
+body #chatroom {
+	position: relative !important;
+	overflow: hidden;
+	height: auto;
+	order: 10;
+	grid-column: 1 / span 6;
+	width: 210px;
+	background: red !important;
+	left: 0;
+	margin: 0.5em 0 0 0;
+	border-top: 1px solid;
+}
+
+#chatroom iframe {
+	margin: -42px 0 -3px -3px;
+	aspect-ratio: 1 / 2;
+}
+
+div#content {
+	float: none;
+	grid-column: 7 / span all;
+	grid-row: 1 / span all;
+	overflow-y: scroll;
+	width: 100%;
+	align-items: start;
+	display: flex;
+	box-sizing: border-box;
+	justify-content: center;
+	padding: 10vh 0;
+}
+
+div#alerts [id^=alert] {
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	border-radius: 13px;
+	margin: 5px;
+}
+
+#alerts .body {
+	height: auto;
+	padding: 5px !important;
+	background: white;
+	border-radius: 7px;
+	margin: 0 10px 10px 10px;
+}
+
+#alerts .body .alertimg {
+	margin: 0 0.5em 0 0;
+	display: block;
+}
+
+#alerts .img-back {
+	margin: 0 0 -100% 0;
+	width: 1000%;
+	height: 1000%;
+	left: -50%;
+	top: -10%;
+}
+
+div#header h1 a {
+	margin: 0;
+	width: 110%;
+	height: auto;
+	background-size: contain;
+	aspect-ratio: 2 / 1;
+}
+
+div#sidebar #petname ul,
+#petname .userpetname-btn {
+	display: none;
+}
+
+div#sidebar #username {
+	display: contents;
+}
+
+div#sidebar #username #avatar, div#sidebar #username #change-avatar, div#sidebar #username ul, div#sidebar #username .userpetname-btn {
+	margin: 0;
+}
+
+div#sidebar #username ul {
+	grid-row: 9;
+	grid-column: 1 / span 6;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 10px;
+}
+
+div#alerts {
+	width: 100%;
+	grid-row: 4;
+	grid-column: 1 / span 6;
+	float: none;
+	padding: 0;
+}
+
+
+div#sidebar .links-l, div#sidebar .links-r {
+	display: contents;
+}
+
+li#updates,
+li#blogs,
+li#calendar,
+li#rules {
+	display: none;
+}
+
+
+div#sidebar .links li {
+	grid-column: span 2;
+	border-radius: 1000px;
+	overflow: hidden;
+	aspect-ratio: 1 / 1;
+	margin: 0;
+	width: 51px;
+}
+
+div#sidebar #username ul + .userpetname-btn {
+	position: relative;
+	background: none;
+	grid-column: 1 / span 6;
+	grid-row: 6 / span 1;
+	margin: 7px 0;
+	width: 100%;
+	height: 100%;
+}
+
+div#sidebar #username #change-avatar {
+	display: none;
+}
+
+div#sidebar #date {
+	width: auto;
+	grid-row: 3;
+	grid-column: 1 / span 3;
+	color: white;
+	margin: 0.7em 0;
+	font-size: 11px;
+}
+
+#main-navbar #inventory li {
+	float: none;
+	order: 1;
+	grid-column: span 2;
+	border-radius: 1000px 1000px 20px 20px;
+	overflow: hidden;
+	margin: 0;
+	height: 49px;
+	width: 52px;
+}
+
+div#sidebar div#username h1 {
+	display: none;
+}
+
+div#username h1 + a {
+	grid-column: 1 / span 6;
+	justify-self: center;
+}
+
+div#petSelect {
+	grid-column: span 6;
+}
+
+div#sidebar #logout a[href*=logout] {
+	height: 100%;
+	width: 100%;
+	aspect-ratio: 3 / 1;
+	background-position-x: center;
+	margin: 0;
+	min-height: 2em;
+	background: none;
+	text-indent: 0;
+	float: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+div#logout {
+	order: 11;
+	grid-column: 1 / span 3;
+}
+
+div#sidebar li#stats-r {
+	display: none;
+}
+
+div#sidebar #stats {
+	display: contents;
+}
+
+div#sidebar #stats-l {
+	width: auto;
+	height: auto;
+	grid-row: 3;
+	grid-column: 4 / span 3;
+	background: none;
+	color: white;
+	font-size: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+/* Event Banner ============= */
+div#sidebar .links > a {
+	width: 95%;
+	grid-row: 5;
+	grid-column: 1 / span 6;
+	background-position: center -5px;
+	border: 5px solid;
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+div#sidebar .links > a > img {
+	margin: -5px;
+}
+
+
+#content #breadcrumbs {
+	display: none;
+}
+
+ul#sidetabs {
+	display: none;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+div#sidebar #username #avatar {
+	width: 107px;
+	height: 85px;
+}
+
+div#sidebar .links #preferences {
+	grid-column: span 3;
+	order: 12;
+	width: 3em;
+}
+
+div#search form {
+	display: none;
+}
+
+/* Padding positing before sidebar */
+div#header:before {
+	content: "";
+	grid-row: 1;
+	grid-column: span 6;
+}
+
+div#sidebar .links > a:hover {background-position-y: calc(100% + 5px);}
+
+div#header + .wraper #main-navbar #inventory li a {
+	margin: 0 auto;
+	position: relative;
+	width: 100% !important;
+	height: 100%;
+	background-position: -2px -3px;
+}
+
+#main-navbar #inventory li a:before {
+	content: "";
+	display: block;
+	position: absolute;
+	background: inherit;
+	height: 200%;
+	width: 200%;
+	background-size: 1000%;
+	background-repeat: repeat;
+	background-position: left bottom;
+	z-index: -1;
+	left: -50%;
+	top: -50%;
+}
+
+.wraper div#sidebar .links li a {
+	background-size: auto 184% !important;
+	background-position: -6px 3px !important;
+	width: 48px;
+	height: 100%;
+	margin: auto;
+	position: relative;
+}
+
+
+.wraper div#sidebar .links li a:hover {
+	background-position: -6px calc(100% - 1px) !important;
+}
+
+.wraper #sidebar .links li a:before {
+	content: "";
+	display: block;
+	position: absolute;
+	background: inherit;
+	height: 200%;
+	width: 200%;
+	background-size: 1000%;
+	background-repeat: repeat;
+	background-position: left bottom;
+	z-index: -1;
+	left: -50%;
+	top: -50%;
+}
+
+.clear {
+	display: none;
+}
+
+body:before {
+	/* content: ""; */
+	display: block;
+	height: 100%;
+	width: 100%;
+	z-index: -100;
+	position: absolute;
+	background: #082a4d;
+	grid-column: 1 / span 6;
+	grid-row: 2 / 14;
+	border-radius: 0 20px 20px 0;
+}
+
+/* Use quest button for background so it automatically changes color with Res Themes*/
+div#sidebar #username .userpetname-btn + .userpetname-btn {
+	display: block;
+	height: 100%;
+	width: 100%;
+	z-index: -100;
+	position: absolute;
+	background-size: 1000% 1000%;
+	grid-column: 1 / span 6;
+	grid-row: 3 / -2;
+	border-radius: 0 20px 20px 0;
+	margin: 0 !important;
+	padding: 0;
+}
+div#sidebar #username .userpetname-btn + .userpetname-btn a {
+	display: none;
+}
+
+div#sidebar .links #help {
+	display: contents;
+}
+
+div#sidebar .links #help a:before {
+	display: none
+}
+
+/* Use help button for background so it automatically changes color with Res Themes*/
+div#sidebar .links #help a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	z-index: -100;
+	position: absolute;
+	background-size: 10000% !important;
+	grid-column: 1 / span 6;
+	grid-row: 4 / -3;
+	border-radius: 0 20px 20px 0;
+	pointer-events: none;
+	margin: 0;
+	/* border: 2px solid; */
+	/* border-left: 0; */
+}
+
+div#sidebar #pet-selector {
+	border-radius: 13px;
+	background: white;
+	height: auto;
+	width: auto;
+	max-width: 122px;
+}
+
+div#sidebar #pet-selector #select2 a:link, div#sidebar #pet-selector #select2 a:visited,
+div#sidebar #pet-selector #select a:link, div#sidebar #pet-selector #select a:visited {
+	border-radius: 7px;
+	border: 1px solid #d92c84;
+	background-position: -1px -1px;
+	padding: 3px;
+	height: 21px;
+	width: 100%;
+	background-size: calc(100% + 2px);
+}
+
+div#sidebar #pet-selector #select2 a:hover,
+div#sidebar #pet-selector #select a:hover {
+	background-position: -1px bottom;
+	border: 1px solid #cb5500;
+}
+
+div#sidebar #pet-selector #select a:link, #sidebar #pet-selector #select a:visited {
+	border: 1px solid #cb5500;
+}
+
+div#sidebar #pet-selector #select a:hover {
+	border: 1px solid #d92c84;
+}
+
+div#sidebar #pet-selector #right {
+	left: calc(100% - 3px);
+	top: calc(50% - 13px);
+}
+
+div#sidebar #pet-selector #left {
+	right: calc(100% - 3px);
+	left: auto;
+	top: calc(50% - 13px);
+}
+
+div#sidebar #username #avatar {
+	background: white;
+	border-radius: 12px;
+	height: auto;
+	width: 122px;
+}
+
+div#sidebar #pet-selector #petImage a img {
+	height: auto;
+	width: 100%;
+	aspect-ratio: 1/1;
+}
+
+div#sidebar #petname {
+	margin: 10px 0;
+}
+
+
+div#sidebar #stats span a:link, div#sidebar #stats span a:visited {
+	color: inherit;
+}
+
+div#sidebar #stats-l .amount {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+div#sidebar #stats-l .amount a:after {
+	content: " Online";
+}
+
+
+#alerts .header {
+	height: 2.5em;
+	white-space: nowrap;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+}
+
+#alerts .header .close {
+	margin: 0;
+	float: none;
+}
+
+#alerts .header p {
+	max-width: calc(100% - 50px);
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin: 0 !important;
+	margin-left: 11px !important;
+}
+
+#alerts .header .switcher {
+	margin: 0 0 0 0.5em !important;
+	float: none;
+}
+
+#alerts .header a:last-child {
+	margin: 0 0.5em 0 auto;
+}
+
+
+.wraper #sidebar .links #preferences a {
+	width: 90%;
+	height: 100%;
+	background-size: 117px auto;
+	/* background-position: -8px -3px !important; */
+}
+
+
+div#sidebar:before {
+	content: "event placeholder";
+	grid-row: 5;
+	grid-column: 1 / span 6;
+	font-size: 0;
+}
+
+#chatroom_closed {
+	order: 10;
+	grid-column: 1 / span 6;
+	width: 0;
+	height: 0;
+	position: relative !important;
+	overflow: hidden;
+}
+
+div#sidebar > .wraper:after {
+	content: "";
+	position: absolute;
+	background-image: inherit;
+	height: calc(100% + 20px);
+	width: calc(100% + 20px);
+	display: block;
+	grid-column: 1 / span 6;
+	grid-row: 3 / -2;
+	z-index: -2;
+	opacity: 0.2;
+	border-radius: 0 30px 30px 0;
+	top: -10px;
+}
+
+#header + .wraper #main-navbar #inventory li a:hover {
+	background-position: -2px calc(100% - 0px);
+}
+
+#main-navbar #inventory li#hatchery {
+	border-radius: 46% 75% 20px 20px / 80% 90% 10% 20px;
+}
+
+#main-navbar #inventory li#collections {
+	border-radius: 42% 100% 20px 20px / 100% 38% 20px 20px;
+}
+
+#main-navbar #inventory li#collections a:after {
+	content: "";
+	display: block;
+	position: absolute;
+	background: inherit;
+	height: 6px;
+	width: 11px;
+	border-radius: 0 0 100% 100%;
+	background-size: 10000%;
+	background-position: left bottom;
+	left: 36%;
+	top: -1px;
+}
+
+#main-navbar #inventory li#showroom {
+	border-radius: 51% 100% 20px 20px / 100% 48% 20px 20px;
+}
+
+div#sidebar #username .userpetname-btn a[href*=profile] {
+	position: relative;
+	grid-column: 1 / span 6;
+	grid-row: 6 / span 1;
+	width: fit-content;
+	font-size: 0;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	z-index: 0;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	overflow: hidden;
+}
+
+div#sidebar #username .userpetname-btn a[href*=profile]:after {
+	content: attr(href);
+	margin-left: -26.6em;
+	font-size: 12px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+html {
+	overflow: hidden;
+}
+
+div#message {
+	display: table-cell;
+}

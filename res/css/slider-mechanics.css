@@ -1,0 +1,175 @@
+/* -----------Slides----------- */
+
+.slide-select:nth-of-type(1):checked ~ #slides > .slide:nth-child(1),
+.slide-select:nth-of-type(2):checked ~ #slides > .slide:nth-child(2),
+.slide-select:nth-of-type(3):checked ~ #slides > .slide:nth-child(3),
+.slide-select:nth-of-type(4):checked ~ #slides > .slide:nth-child(4),
+.slide-select:nth-of-type(5):checked ~ #slides > .slide:nth-child(5),
+.slide-select:nth-of-type(6):checked ~ #slides > .slide:nth-child(6),
+.slide-select:nth-of-type(7):checked ~ #slides > .slide:nth-child(7),
+.slide-select:nth-of-type(8):checked ~ #slides > .slide:nth-child(8),
+.slide-select:nth-of-type(9):checked ~ #slides > .slide:nth-child(9),
+.slide-select:nth-of-type(10):checked ~ #slides > .slide:nth-child(10),
+.slide-select:nth-of-type(11):checked ~ #slides > .slide:nth-child(11),
+.slide-select:nth-of-type(12):checked ~ #slides > .slide:nth-child(12),
+.slide-select:nth-of-type(13):checked ~ #slides > .slide:nth-child(13),
+.slide-select:nth-of-type(14):checked ~ #slides > .slide:nth-child(14),
+.slide-select:nth-of-type(15):checked ~ #slides > .slide:nth-child(15),
+.slide-select:nth-of-type(16):checked ~ #slides > .slide:nth-child(16),
+.slide-select:nth-of-type(17):checked ~ #slides > .slide:nth-child(17),
+.slide-select:nth-of-type(18):checked ~ #slides > .slide:nth-child(18),
+.slide-select:nth-of-type(19):checked ~ #slides > .slide:nth-child(19),
+.slide-select:nth-of-type(20):checked ~ #slides > .slide:nth-child(20) {
+	display: block;
+	z-index: 10;
+}
+
+#slides > .slide {
+	display: none;
+}
+
+/* --------Navigation---------- */
+
+.slide-select:nth-of-type(1):checked ~ #slides > .pagination-container .pagination :nth-child(1),
+.slide-select:nth-of-type(2):checked ~ #slides > .pagination-container .pagination :nth-child(2),
+.slide-select:nth-of-type(3):checked ~ #slides > .pagination-container .pagination :nth-child(3),
+.slide-select:nth-of-type(4):checked ~ #slides > .pagination-container .pagination :nth-child(4),
+.slide-select:nth-of-type(5):checked ~ #slides > .pagination-container .pagination :nth-child(5),
+.slide-select:nth-of-type(6):checked ~ #slides > .pagination-container .pagination :nth-child(6),
+.slide-select:nth-of-type(7):checked ~ #slides > .pagination-container .pagination :nth-child(7),
+.slide-select:nth-of-type(8):checked ~ #slides > .pagination-container .pagination :nth-child(8),
+.slide-select:nth-of-type(9):checked ~ #slides > .pagination-container .pagination :nth-child(9),
+.slide-select:nth-of-type(10):checked ~ #slides > .pagination-container .pagination :nth-child(10),
+.slide-select:nth-of-type(11):checked ~ #slides > .pagination-container .pagination :nth-child(11),
+.slide-select:nth-of-type(12):checked ~ #slides > .pagination-container .pagination :nth-child(12),
+.slide-select:nth-of-type(13):checked ~ #slides > .pagination-container .pagination :nth-child(13),
+.slide-select:nth-of-type(14):checked ~ #slides > .pagination-container .pagination :nth-child(14),
+.slide-select:nth-of-type(15):checked ~ #slides > .pagination-container .pagination :nth-child(15),
+.slide-select:nth-of-type(16):checked ~ #slides > .pagination-container .pagination :nth-child(16),
+.slide-select:nth-of-type(17):checked ~ #slides > .pagination-container .pagination :nth-child(17),
+.slide-select:nth-of-type(18):checked ~ #slides > .pagination-container .pagination :nth-child(18),
+.slide-select:nth-of-type(19):checked ~ #slides > .pagination-container .pagination :nth-child(19),
+.slide-select:nth-of-type(20):checked ~ #slides > .pagination-container .pagination :nth-child(20) {
+	font-weight: bold;
+	display: inline-block;
+}
+
+#custom-slider input,
+.pagination-container .iterator label {
+	display: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+/* -------------- Pop Ups --------------- */
+
+#modal-select:checked ~ #slider-modals {
+	display: flex;
+}
+
+.slide-select:nth-of-type(1):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(1),
+.slide-select:nth-of-type(2):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(2),
+.slide-select:nth-of-type(3):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(3),
+.slide-select:nth-of-type(4):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(4),
+.slide-select:nth-of-type(5):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(5),
+.slide-select:nth-of-type(6):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(6),
+.slide-select:nth-of-type(7):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(7),
+.slide-select:nth-of-type(8):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(8),
+.slide-select:nth-of-type(9):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(9),
+.slide-select:nth-of-type(10):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(10),
+.slide-select:nth-of-type(11):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(11),
+.slide-select:nth-of-type(12):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(12),
+.slide-select:nth-of-type(13):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(13),
+.slide-select:nth-of-type(14):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(14),
+.slide-select:nth-of-type(15):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(15),
+.slide-select:nth-of-type(16):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(16),
+.slide-select:nth-of-type(17):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(17),
+.slide-select:nth-of-type(18):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(18),
+.slide-select:nth-of-type(19):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(19),
+.slide-select:nth-of-type(20):checked ~ #modal-select:checked ~ #slider-modals > .modal:nth-of-type(20) {
+	display: block;
+}
+
+#slider-modals, 
+.modal {
+	display: none;
+}
+
+/* ----------------- Effect Selector ------------------------ */
+
+.modal form .petlist .effectall input[type=checkbox]:checked + .effect-selector label + .pet-effects {
+	display: block;
+}
+
+.modal form .pet-effects {
+	display: none;
+}
+
+.modal form .petlist .adopt-image img {
+	display: none;
+}
+
+.modal form input[type=radio]:nth-of-type(1):checked ~ .petlist .adopt-image img:nth-of-type(1),
+.modal form input[type=radio]:nth-of-type(2):checked ~ .petlist .adopt-image img:nth-of-type(2),
+.modal form input[type=radio]:nth-of-type(3):checked ~ .petlist .adopt-image img:nth-of-type(3),
+.modal form input[type=radio]:nth-of-type(4):checked ~ .petlist .adopt-image img:nth-of-type(4),
+.modal form input[type=radio]:nth-of-type(5):checked ~ .petlist .adopt-image img:nth-of-type(5),
+.modal form input[type=radio]:nth-of-type(6):checked ~ .petlist .adopt-image img:nth-of-type(6),
+.modal form input[type=radio]:nth-of-type(7):checked ~ .petlist .adopt-image img:nth-of-type(7){
+	display: flex;
+}
+
+/* ---------- Effect Names -------------- */
+.modal input[type=radio]:nth-of-type(1):checked ~ .petlist .effect-selector .openefflab::after {
+	content: "None";
+}
+
+.modal #LoloxBats[type=radio]:checked ~ .petlist .effect-selector .openefflab::after,
+.modal #KenroBats[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Spooky Bats";
+}
+.modal #IekailFire[type=radio]:checked ~ .petlist .effect-selector .openefflab::after,
+.modal #LoloxFire[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Reiflem Gumball";
+}
+.modal #IekailCorn[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Candy Corn";
+}
+.modal #ZarellaTreeHat[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Christmas Tree & Hat";
+}
+.modal #LoloxFireBalloon[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Reiflem Gumball & Balloon";
+}
+.modal #KenroUndeadBats[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Undead & Spooky Bats";
+}
+.modal #IekailUndeadCorn[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Undead & Candy Corn";
+}
+.modal #IekailHat[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Classic Hat";
+}
+.modal #IekailCloudHat[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Scria Gumball & Classic Hat";
+}
+.modal #IekailSnowHat[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Snow Pile & Classic Hat";
+}
+.modal #KenroHat[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Elf Hat";
+}
+.modal #KenroIceHat[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Frost Light & Elf Hat";
+}
+.modal #ZarellaDecorTreeHat[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Decorated Christmas Tree & Hat";
+}
+.modal #ZarellaSnowTreeHat[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Snow Pile & Decorated Tree & Hat";
+}
+.modal #ZarellaBoxTreeHat[type=radio]:checked ~ .petlist .effect-selector .openefflab::after {
+	content: "Present & Decorated Tree & Hat";
+}
